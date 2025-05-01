@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Colorful Webpage</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      color: #333;
+      margin: 40px;
+    }
+    h1 {
+      font-size: 3em;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    img {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-top: 10px;
+      border: 3px solid #ff4b2b;
+    }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    button, a.fancy-button {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: linear-gradient(45deg, #00f2fe, #4facfe);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    #message {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 15px;
+      color: #ff4b2b;
+    }
+    .dark-mode {
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #eee;
+    }
+    .dark-mode h1 {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .dark-mode #message {
+      color: #00ffe5;
+    }
+    .dark-mode button, .dark-mode a.fancy-button {
+      background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    }
+    .dark-mode button:hover, .dark-mode a.fancy-button:hover {
+      background: linear-gradient(45deg, #f7971e, #ffd200);
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ Welcome to My Colorful Webpage ✨</h1>
+  <p>Let’s make web development fun and fabulous with glowing colors and smooth interactions!</p>
+  <img src="pawan.jpeg" alt="Colorful Image" />
+  <div class="button-row">
+    <a href="https://github.com/" target="_blank" class="fancy-button">🌐 GitHub</a>
+    <a href="mailto:pawankumarpppp4@gmail.com" class="fancy-button">📧 Email Me</a>
+    <button onclick="showMessage()">🎉 Greet Me!</button>
+    <button onclick="toggleDarkMode()">🌓 Toggle Theme</button>
+  </div>
+  <p id="message"></p>
+  <script>
+    function showMessage() {
+      const name = prompt("What's your name?");
+      const message = name ? `🎈 Hello, ${name}! Welcome aboard! 🎈` : "You didn't enter a name!";
+      document.getElementById("message").textContent = message;
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
